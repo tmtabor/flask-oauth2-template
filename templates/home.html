@@ -1,0 +1,11 @@
+{% if user %}
+    <h2>User Data</h2>
+    <p>{{ user|tojson }}</p>
+    <a href="/logout">Logout</a>
+{% else %}
+    <a href="/login/globus">Globus Login</a>
+    <br/>
+    <a href="/login/google">Google Login</a>
+    <br/>
+    <a href="/login/genepattern">GenePattern Login</a>
+{% endif %}
